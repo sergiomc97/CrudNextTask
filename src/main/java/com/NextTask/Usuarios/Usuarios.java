@@ -1,4 +1,4 @@
-package com.NextTask.entity;
+package com.NextTask.Usuarios;
 
 import jakarta.persistence.*;
 
@@ -11,20 +11,22 @@ public class Usuarios implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id_usuario;
+    private Integer id_usuario;
     @Column
     private String nick;
     @Column
     private String pass;
     @Column
     private String mail;
-    @Column
+
+    @ManyToOne
+    @JoinColumn(name="id_rol")
     private int id_rol;
 
     public Usuarios() {
     }
 
-    public Usuarios(int id_usuario, String nick, String pass, String mail, int id_rol) {
+    public Usuarios(Integer id_usuario, String nick, String pass, String mail, int id_rol) {
         this.id_usuario = id_usuario;
         this.nick = nick;
         this.pass = pass;
@@ -32,11 +34,11 @@ public class Usuarios implements Serializable {
         this.id_rol = id_rol;
     }
 
-    public int getId_usuario() {
+    public Integer getId_usuario() {
         return id_usuario;
     }
 
-    public void setId_usuario(int id_usuario) {
+    public void setId_usuario(Integer id_usuario) {
         this.id_usuario = id_usuario;
     }
 
