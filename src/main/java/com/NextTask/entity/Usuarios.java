@@ -2,21 +2,29 @@ package com.NextTask.entity;
 
 import jakarta.persistence.*;
 
-@Entity
-@Table(name="usuarios")
-public class User {
+import java.io.Serializable;
+
+@Entity(name="usuarios")
+public class Usuarios implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id_usuario;
+    @Column
     private String nick;
+    @Column
     private String pass;
+    @Column
     private String mail;
+    @Column
     private int id_rol;
 
-    public User() {
+    public Usuarios() {
     }
 
-    public User(int id_usuario, String nick, String pass, String mail, int id_rol) {
+    public Usuarios(int id_usuario, String nick, String pass, String mail, int id_rol) {
         this.id_usuario = id_usuario;
         this.nick = nick;
         this.pass = pass;

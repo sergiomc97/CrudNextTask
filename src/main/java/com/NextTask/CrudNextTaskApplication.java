@@ -1,4 +1,4 @@
-package com.NextTask.CrudNextTask;
+package com.NextTask;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,6 +1,6 @@
 package com.NextTask.controller;
 
-import com.NextTask.entity.User;
+import com.NextTask.entity.Usuarios;
 import com.NextTask.interfaces.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,7 +18,7 @@ public class UserController {
     private UserRepository repo;
 
     @GetMapping("/getAll")
-    public String getAll(){
-        return "hola muindo";
+    public List<Usuarios> getAll(){
+        return repo.findAll();
     }
 }
