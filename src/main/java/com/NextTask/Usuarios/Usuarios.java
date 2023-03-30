@@ -1,5 +1,6 @@
 package com.NextTask.Usuarios;
 
+import com.NextTask.Roles.Roles;
 import jakarta.persistence.*;
 
 import java.io.Serializable;
@@ -21,12 +22,12 @@ public class Usuarios implements Serializable {
 
     @ManyToOne
     @JoinColumn(name="id_rol")
-    private int id_rol;
+    private Roles id_rol;
 
     public Usuarios() {
     }
 
-    public Usuarios(Integer id_usuario, String nick, String pass, String mail, int id_rol) {
+    public Usuarios(Integer id_usuario, String nick, String pass, String mail, Roles id_rol) {
         this.id_usuario = id_usuario;
         this.nick = nick;
         this.pass = pass;
@@ -66,11 +67,11 @@ public class Usuarios implements Serializable {
         this.mail = mail;
     }
 
-    public int getId_rol() {
+    public Roles getId_rol() {
         return id_rol;
     }
 
-    public void setId_rol(int id_rol) {
+    public void setId_rol(Roles id_rol) {
         this.id_rol = id_rol;
     }
 }

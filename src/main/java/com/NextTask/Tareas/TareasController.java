@@ -1,4 +1,4 @@
-package com.NextTask.Usuarios;
+package com.NextTask.Tareas;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -6,22 +6,22 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping(path="/usuarios")
-public class UserController {
+@RequestMapping(path="/tareas")
+public class TareasController {
 
     @Autowired
-    private UserRepository repo;
+    private TareasRepository repo;
 
     @GetMapping
-    public List<Usuarios> getAll(){
+    public List<Tareas> getAll(){
         return repo.findAll();
     }
     @PostMapping
-    public void insertar(@RequestBody Usuarios us){
+    public void insertar(@RequestBody Tareas us){
         repo.save(us);
     }
     @PutMapping
-    public void modificar(@RequestBody Usuarios us){
+    public void modificar(@RequestBody Tareas us){
         repo.save(us);
     }
     @DeleteMapping

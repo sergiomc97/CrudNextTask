@@ -13,8 +13,6 @@ public class Roles implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id_rol;
 
-    @OneToMany
-    @JoinColumn(name="id_rol")
     private String nombre_rol;
 
 

@@ -1,4 +1,4 @@
-package com.NextTask.Usuarios;
+package com.NextTask.Comentarios;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -6,22 +6,22 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping(path="/usuarios")
-public class UserController {
+@RequestMapping(path="/comentarios")
+public class ComentariosController {
 
     @Autowired
-    private UserRepository repo;
+    private ComentariosRepository repo;
 
     @GetMapping
-    public List<Usuarios> getAll(){
+    public List<Comentarios> getAll(){
         return repo.findAll();
     }
     @PostMapping
-    public void insertar(@RequestBody Usuarios us){
+    public void insertar(@RequestBody Comentarios us){
         repo.save(us);
     }
     @PutMapping
-    public void modificar(@RequestBody Usuarios us){
+    public void modificar(@RequestBody Comentarios us){
         repo.save(us);
     }
     @DeleteMapping
