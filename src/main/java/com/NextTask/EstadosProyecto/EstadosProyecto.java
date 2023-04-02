@@ -13,7 +13,7 @@ public class EstadosProyecto implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id_estadoProyecto;
 
-    private String nombre_estado;
+    private String nombre_estado_proyecto;
 
 
     public EstadosProyecto() {
@@ -21,7 +21,7 @@ public class EstadosProyecto implements Serializable {
 
     public EstadosProyecto(Integer id_estadoProyecto, String nombre_estado) {
         this.id_estadoProyecto = id_estadoProyecto;
-        this.nombre_estado = nombre_estado;
+        this.nombre_estado_proyecto = nombre_estado;
     }
 
     public Integer getId_estadoProyecto() {
@@ -33,10 +33,10 @@ public class EstadosProyecto implements Serializable {
     }
 
     public String getNombre_estado() {
-        return nombre_estado;
+        return nombre_estado_proyecto;
     }
 
     public void setNombre_estado(String nombre_estado) {
-        this.nombre_estado = nombre_estado;
+        this.nombre_estado_proyecto = nombre_estado;
     }
 }

@@ -19,11 +19,11 @@ public class Tareas implements Serializable {
 
     private String nombre_tarea;
 
-    private String desc_tarea;
+    private String descripcion_tarea;
 
-    private Date fech_inicio;
+    private Date fecha_inicio_tarea;
 
-    private Date fech_fin;
+    private Date fecha_fin_tarea;
 
     @ManyToOne
     @JoinColumn(name = "id_prioridad_tarea")
@@ -43,12 +43,12 @@ public class Tareas implements Serializable {
     public Tareas() {
     }
 
-    public Tareas(int id_tarea, String nombre_tarea, String desc_tarea, Date fech_inicio, Date fech_fin, PrioridadesTarea id_prioridad, EstadosTarea id_estado, EstadosProyecto id_proyecto) {
+    public Tareas(int id_tarea, String nombre_tarea, String descripcion_tarea, Date fecha_inicio_tarea, Date fecha_fin_tarea, PrioridadesTarea id_prioridad, EstadosTarea id_estado, EstadosProyecto id_proyecto) {
         this.id_tarea = id_tarea;
         this.nombre_tarea = nombre_tarea;
-        this.desc_tarea = desc_tarea;
-        this.fech_inicio = fech_inicio;
-        this.fech_fin = fech_fin;
+        this.descripcion_tarea = descripcion_tarea;
+        this.fecha_inicio_tarea = fecha_inicio_tarea;
+        this.fecha_fin_tarea = fecha_fin_tarea;
         this.id_prioridad = id_prioridad;
         this.id_estado = id_estado;
         this.id_proyecto = id_proyecto;
@@ -70,29 +70,6 @@ public class Tareas implements Serializable {
         this.nombre_tarea = nombre_tarea;
     }
 
-    public String getDesc_tarea() {
-        return desc_tarea;
-    }
-
-    public void setDesc_tarea(String desc_tarea) {
-        this.desc_tarea = desc_tarea;
-    }
-
-    public Date getFech_inicio() {
-        return fech_inicio;
-    }
-
-    public void setFech_inicio(Date fech_inicio) {
-        this.fech_inicio = fech_inicio;
-    }
-
-    public Date getFech_fin() {
-        return fech_fin;
-    }
-
-    public void setFech_fin(Date fech_fin) {
-        this.fech_fin = fech_fin;
-    }
 
     public PrioridadesTarea getId_prioridad() {
         return id_prioridad;
@@ -116,5 +93,29 @@ public class Tareas implements Serializable {
 
     public void setId_proyecto(EstadosProyecto id_proyecto) {
         this.id_proyecto = id_proyecto;
+    }
+
+    public String getDescripcion_tarea() {
+        return descripcion_tarea;
+    }
+
+    public void setDescripcion_tarea(String descripcion_tarea) {
+        this.descripcion_tarea = descripcion_tarea;
+    }
+
+    public Date getFecha_inicio_tarea() {
+        return fecha_inicio_tarea;
+    }
+
+    public void setFecha_inicio_tarea(Date fecha_inicio_tarea) {
+        this.fecha_inicio_tarea = fecha_inicio_tarea;
+    }
+
+    public Date getFecha_fin_tarea() {
+        return fecha_fin_tarea;
+    }
+
+    public void setFecha_fin_tarea(Date fecha_fin_tarea) {
+        this.fecha_fin_tarea = fecha_fin_tarea;
     }
 }

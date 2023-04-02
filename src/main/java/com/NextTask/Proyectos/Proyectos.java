@@ -18,8 +18,8 @@ public class Proyectos implements Serializable {
 
     private String nombre_proyecto;
     private String descripcion_proyecto;
-    private Date fecha_inicio;
-    private Date fecha_fin;
+    private Date fecha_inicio_proyecto;
+    private Date fecha_fin_proyecto;
 
     @ManyToOne
     @JoinColumn(name = "id_estado_proyecto")
@@ -28,12 +28,12 @@ public class Proyectos implements Serializable {
     public Proyectos() {
     }
 
-    public Proyectos(Integer id_proyecto, String nombre_proyecto, String descripcion_proyecto, Date fecha_inicio, Date fecha_fin, EstadosProyecto estado_proyecto) {
+    public Proyectos(Integer id_proyecto, String nombre_proyecto, String descripcion_proyecto, Date fecha_inicio_proyecto, Date fecha_fin_proyecto, EstadosProyecto estado_proyecto) {
         this.id_proyecto = id_proyecto;
         this.nombre_proyecto = nombre_proyecto;
         this.descripcion_proyecto = descripcion_proyecto;
-        this.fecha_inicio = fecha_inicio;
-        this.fecha_fin = fecha_fin;
+        this.fecha_inicio_proyecto = fecha_inicio_proyecto;
+        this.fecha_fin_proyecto = fecha_fin_proyecto;
         this.estado_proyecto = estado_proyecto;
     }
 
@@ -61,27 +61,27 @@ public class Proyectos implements Serializable {
         this.descripcion_proyecto = descripcion_proyecto;
     }
 
-    public Date getFecha_inicio() {
-        return fecha_inicio;
-    }
-
-    public void setFecha_inicio(Date fecha_inicio) {
-        this.fecha_inicio = fecha_inicio;
-    }
-
-    public Date getFecha_fin() {
-        return fecha_fin;
-    }
-
-    public void setFecha_fin(Date fecha_fin) {
-        this.fecha_fin = fecha_fin;
-    }
-
     public EstadosProyecto getEstado_proyecto() {
         return estado_proyecto;
     }
 
     public void setEstado_proyecto(EstadosProyecto estado_proyecto) {
         this.estado_proyecto = estado_proyecto;
+    }
+
+    public Date getFecha_inicio_proyecto() {
+        return fecha_inicio_proyecto;
+    }
+
+    public void setFecha_inicio_proyecto(Date fecha_inicio_proyecto) {
+        this.fecha_inicio_proyecto = fecha_inicio_proyecto;
+    }
+
+    public Date getFecha_fin_proyecto() {
+        return fecha_fin_proyecto;
+    }
+
+    public void setFecha_fin_proyecto(Date fecha_fin_proyecto) {
+        this.fecha_fin_proyecto = fecha_fin_proyecto;
     }
 }

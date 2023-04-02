@@ -16,9 +16,9 @@ public class Comentarios implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id_comentario;
 
-    private String contenido;
+    private String contenido_comentario;
 
-    private Date fecha;
+    private Date fecha_comentario;
 
     @ManyToOne
     @JoinColumn(name="id_usuario")
@@ -35,8 +35,8 @@ public class Comentarios implements Serializable {
 
     public Comentarios(Integer id_comentario, String contenido, Date fecha, Usuarios id_usuario, Tareas id_tarea) {
         this.id_comentario = id_comentario;
-        this.contenido = contenido;
-        this.fecha = fecha;
+        this.contenido_comentario = contenido;
+        this.fecha_comentario = fecha;
         this.id_usuario = id_usuario;
         this.id_tarea = id_tarea;
     }
@@ -50,19 +50,19 @@ public class Comentarios implements Serializable {
     }
 
     public String getContenido() {
-        return contenido;
+        return contenido_comentario;
     }
 
     public void setContenido(String contenido) {
-        this.contenido = contenido;
+        this.contenido_comentario = contenido;
     }
 
     public Date getFecha() {
-        return fecha;
+        return fecha_comentario;
     }
 
     public void setFecha(Date fecha) {
-        this.fecha = fecha;
+        this.fecha_comentario = fecha;
     }
 
     public Usuarios getId_usuario() {

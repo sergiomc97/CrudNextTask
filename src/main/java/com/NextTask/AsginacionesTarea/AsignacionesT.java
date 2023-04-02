@@ -13,7 +13,7 @@ public class AsignacionesT implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id_as;
+    private Integer id_asignacion_tarea;
 
     @ManyToOne
     @JoinColumn(name="id_tarea")
@@ -27,17 +27,17 @@ public class AsignacionesT implements Serializable {
     }
 
     public AsignacionesT(Integer id_as, Tareas id_tarea, Usuarios id_usuario) {
-        this.id_as = id_as;
+        this.id_asignacion_tarea = id_as;
         this.id_tarea = id_tarea;
         this.id_usuario = id_usuario;
     }
 
     public Integer getId_as() {
-        return id_as;
+        return id_asignacion_tarea;
     }
 
     public void setId_as(Integer id_as) {
-        this.id_as = id_as;
+        this.id_asignacion_tarea = id_as;
     }
 
     public Tareas getId_tarea() {
